@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="robot.js"></script>
+    <style>
+    	#controls {
+    		display: block;
+    		position: absolute;
+    		right: 50px;
+    		top: 0px;
+    	}
+    	#report_placeholder, #commandSequence {
+    		background-color: #CCCCCC;
+    	}
+    	#x, #y, #f {
+    		width: 30px;
+    	}
+    </style>
+  </head>
+  <body>
+  	<div id='controls'>
+  		<div id='inputs'>
+  			<button onclick="addPlace()">Place</button>
+  			<input id='x' type='text' name='x' placeholder='x' />
+  			<input id='y' type='text' name='y' placeholder='y' />
+  			<input id='f' type='text' name='f' placeholder='f' />
+  			<br />
+  			<button onclick="addMove()">Move</button>
+  			<br />
+  			<button onclick="addLeft()">Rotate Left</button>
+  			<br />
+  			<button onclick="addRight()">Rotate Right</button>
+  			<br />
+  			<button onclick="addReport()">Report</button>
+  			<br />
+  			<br />
+  			<br />
+  			<button onclick="runGame()">Run</button>
+
+  			<div id='report_placeholder'>
+  				<p><small>Report</small></p>
+	  			<span id='report'>
+	  			</span>
+  			</div>
+  		</div>
+  		<div id="commandSequence">
+  			<p>Command Sequence</p>
+  			<ul id='sequence'>
+  			</ul>
+  		</div>
+  	</div>
+  </body>
+</html>
